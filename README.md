@@ -79,7 +79,7 @@ Please download the models from Google Drive and place them in the **root folder
 
 ## 🚀 How to Run the App
 
-### 1️⃣ Clone the repository
+1️⃣ Clone the repository
 ```bash
 git clone https://github.com/as123loinguyen/Face-Drowsiness-Recognition.git
 cd Face-Drowsiness-Recognition
