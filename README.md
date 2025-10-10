@@ -1,149 +1,205 @@
 # 🧠 Face-Based Drowsiness Recognition
 
-A Flask-based web application that detects **drowsiness** and **facial emotions** from images or webcam in real-time using Deep Learning.
+Ứng dụng web **Flask** nhận diện **buồn ngủ** và **cảm xúc khuôn mặt** từ ảnh hoặc webcam theo thời gian thực bằng **Deep Learning**.
 
 ---
 
-## 📸 Overview
+## 📸 Tổng quan
 
-This project uses **Computer Vision (OpenCV)** and **Deep Learning (Keras/TensorFlow)** to detect whether a person is **drowsy** or **awake**, and simultaneously recognize their **facial emotion** (happy, sad, neutral, angry, etc.).
+Hệ thống kết hợp **OpenCV** (thị giác máy tính) và **TensorFlow/Keras** (mô hình học sâu) để:
+- Phát hiện trạng thái: **Drowsy / Awake**
+- Nhận diện cảm xúc: **Happy, Sad, Neutral, Angry, Surprise, …**
 
-It can be applied in:
-- Driver monitoring systems 🚗
-- Workplace safety systems 🏭
-- Human–computer interaction 🧑‍💻
-
----
-
-## ⚙️ Features
-
-✅ Detect **drowsiness** (eyes closed / open)  
-✅ Recognize **emotion** (happy, sad, neutral, angry, surprise, etc.)  
-✅ Support **image upload** and optional **real-time webcam**  
-✅ Web-based interface (Flask + HTML/CSS/JS)  
-✅ Portable and lightweight  
+Ứng dụng phù hợp cho:
+- Giám sát người lái xe 🚗  
+- An toàn lao động 🏭  
+- Tương tác người–máy 🧑‍💻
 
 ---
 
-## 🏗️ Tech Stack
+## ⚙️ Tính năng
 
-| Component | Technology |
-|------------|-------------|
-| Programming Language | Python 3.10 |
-| Framework | Flask |
+- ✅ Nhận diện **buồn ngủ** từ đặc trưng mắt/biểu cảm  
+- ✅ Nhận diện **cảm xúc** khuôn mặt  
+- ✅ Hỗ trợ **upload ảnh** và (tuỳ chọn) **webcam real‑time**  
+- ✅ Giao diện web Flask đơn giản, dễ dùng  
+- ✅ Dễ cài đặt/chạy trên Windows/macOS/Linux
+
+---
+
+## 🏗️ Công nghệ
+
+| Thành phần | Công nghệ |
+|---|---|
+| Ngôn ngữ | Python 3.10+ |
+| Backend | Flask |
 | Deep Learning | TensorFlow / Keras |
-| Computer Vision | OpenCV |
-| Frontend | HTML, CSS, Bootstrap |
-| Version Control | Git + GitHub |
+| Thị giác máy tính | OpenCV |
+| Frontend | HTML, CSS (Bootstrap) |
+| Quản lý mã nguồn | Git + GitHub |
 
 ---
 
-## 🗂️ Project Structure
+## 🗂️ Cấu trúc thư mục
+
 ```
 Face-Drowsiness-Recognition/
 │
-├── app.py # Main Flask application
+├── app.py                         # Flask app chính
 ├── templates/
-│ ├── index.html # Home page
-│ └── result.html # Result display page
+│   └── index1.html                # Giao diện chính (điều chỉnh theo dự án)
 │
 ├── static/
-│ ├── uploads/ # Uploaded images
-│ ├── css/ # Stylesheets
-│ └── js/ # Optional JS files
+│   └── uploads/                   # Ảnh vào/ra (nếu có)
 │
-├── models/
-│ ├── driver_drowsiness_model.keras
-│ └── emotional_model.h5
+├── driver_drowsiness_model.keras  # (KHÔNG đưa lên GitHub)
+├── emotional_model.h5             # (KHÔNG đưa lên GitHub)
 │
-├── requirements.txt # Python dependencies
+├── requirements.txt               # Dependencies
 ├── .gitignore
 └── README.md
 ```
 
+> 📝 Ghi chú: Trong repo GitHub, **không nên** commit các file model >100MB. Chia sẻ qua Google Drive/HuggingFace và hướng dẫn tải trong README.
 
 ---
 
 ## 🧠 Model Files
 
-> ⚠️ Due to GitHub’s 100 MB file size limit, the trained model files are **not included** in this repository.
+> ⚠️ Do giới hạn 100MB của GitHub, **các model không nằm trong repo**. Hãy tải và đặt cạnh `app.py`.
 
-Please download the models from Google Drive and place them in the **root folder** of the project.
+| File | Mô tả | Link tải |
+|---|---|---|
+| `driver_drowsiness_model.keras` | Model phát hiện buồn ngủ | *(thay link của bạn ở đây)* `https://drive.google.com/your_keras_link` |
+| `emotional_model.h5` | Model nhận diện cảm xúc | https://drive.google.com/file/d/1Ob0sy18c9GsxzSwTtgoHk8X63H8LzC78/view?usp=sharing |
 
-| File Name | Description | Download Link |
-|------------|--------------|----------------|
-| driver_drowsiness_model.keras | Drowsiness detection model | [Download here](https://drive.google.com/your_keras_link) |
-| emotional_model.h5 | Emotion recognition model | [Download here](https://drive.google.com/file/d/1Ob0sy18c9GsxzSwTtgoHk8X63H8LzC78/view?usp=sharing) |
+Sau khi tải, **đặt cả hai file ở thư mục gốc** của dự án (cùng cấp với `app.py`).
 
 ---
 
-## 🚀 How to Run the App
+## 🚀 Hướng dẫn chạy (Quickstart)
 
-### Step 1: Clone the repository
+### Bước 1: Clone repo
 ```bash
 git clone https://github.com/as123loinguyen/Face-Drowsiness-Recognition.git
 cd Face-Drowsiness-Recognition
-Step 2: Create and activate a virtual environment
-For Windows:
+```
 
-bash
-Copy code
+### Bước 2: Tạo & kích hoạt môi trường ảo
+
+**Windows**
+```bash
 python -m venv venv
-venv\Scripts\activate
-For macOS/Linux:
+venv\Scriptsctivate
+```
 
-bash
-Copy code
+**macOS/Linux**
+```bash
 python3 -m venv venv
 source venv/bin/activate
-Step 3: Install dependencies
-bash
-Copy code
+```
+
+### Bước 3: Cài đặt thư viện
+```bash
 pip install -r requirements.txt
-Step 4: Download and place model files
-Download both .keras and .h5 model files from Google Drive
-and place them in the root directory (same folder as app.py).
+# Nếu chưa có requirements.txt, có thể:
+# pip install flask opencv-python tensorflow numpy
+```
 
-Step 5: Run the Flask app
-bash
-Copy code
+### Bước 4: Thêm model
+- Tải 2 file model ở phần **Model Files** phía trên  
+- Đặt cạnh `app.py`
+
+### Bước 5: Chạy ứng dụng
+```bash
 python app.py
-Then open your browser and go to:
+```
 
-cpp
-Copy code
+Mở trình duyệt tới:
+```
 http://127.0.0.1:5000
-Step 6: Stop the server
-Press Ctrl + C in the terminal to stop the Flask app.
+```
 
-yaml
-Copy code
+### Bước 6: Dừng server
+Nhấn **Ctrl + C** trong terminal.
 
 ---
 
-✅ Giờ bạn chỉ cần dán đúng nguyên khối này (từ dòng “## 🚀 How to Run the App” đến hết phần ``` cuối cùng).  
-GitHub sẽ tự hiển thị từng khung code riêng, có nút “Copy”, nhìn rất gọn gàng và đẹp y chang hướng dẫn kỹ
-🧩 How It Works
-User uploads an image or enables the webcam.
+## 🧩 Cách hoạt động (How it works)
 
-The system detects a face using OpenCV.
+1) Người dùng upload ảnh hoặc bật webcam  
+2) OpenCV phát hiện/cắt khuôn mặt, tiền xử lý ảnh  
+3) Model Keras suy luận:
+   - Mắt/trạng thái → **Drowsy / Awake**
+   - Biểu cảm → **Emotion**  
+4) Flask hiển thị ảnh kèm **khung + nhãn + xác suất**
 
-Pre-trained models classify:
+---
 
-Eye state → Drowsy / Awake
+## 🧪 Ví dụ kết quả (minh hoạ)
 
-Facial expression → Emotion type
+| Input | Output |
+|---|---|
+| ![input](https://via.placeholder.com/220x150?text=Input) | ![output](https://via.placeholder.com/220x150?text=Drowsy+%7C+Happy) |
 
-The result (image + prediction) is displayed on the web interface.
+> Thay ảnh thật bằng screenshot từ `static/uploads/` (nếu bạn lưu ảnh kết quả).
 
-🧪 Example Results
-Input	Output
+---
 
-🧾 License
-This project is for educational and research purposes only.
-Developed by as123loinguyen (2025).
+## 🛠️ Lỗi thường gặp (Troubleshooting)
 
-📬 Contact
-For questions or collaboration:
-📧 doan8540@gmail.com
-🌐 GitHub: as123loinguyen
+- **`OSError: ... model not found`**  
+  → Chưa đặt `*.keras`/`*.h5` cạnh `app.py`. Kiểm tra lại đường dẫn.
+
+- **Webcam không hoạt động**  
+  → Kiểm tra quyền camera của trình duyệt (Site Settings → Camera → Allow) và đóng app khác đang dùng camera (Zoom/Meet).
+
+- **ImportError/ModuleNotFoundError**  
+  → Chạy `pip install -r requirements.txt`, hoặc kiểm tra phiên bản Python (khuyến nghị 3.10+).
+
+- **Push lên GitHub bị lỗi >100MB**  
+  → Đảm bảo `.gitignore` đã có:
+  ```
+  *.keras
+  *.h5
+  static/uploads/
+  __pycache__/
+  *.pyc
+  venv/
+  .venv/
+  ```
+  và **không commit** các file model nặng.
+
+---
+
+## 📄 requirements.txt (gợi ý)
+
+```txt
+flask
+opencv-python
+tensorflow
+numpy
+```
+
+> Tuỳ môi trường, bạn có thể cần `tensorflow-cpu` thay cho `tensorflow`.
+
+---
+
+## 🧾 License
+
+Dự án phục vụ **mục đích học tập & nghiên cứu**.
+
+---
+
+## ✉️ Liên hệ
+
+**as123loinguyen**  
+📧 Email: `doan8540@gmail.com`  
+🌐 GitHub: https://github.com/as123loinguyen
+
+---
+
+### Gợi ý nâng cao
+- Đưa model lên **Google Drive/HuggingFace** rồi gắn link tải  
+- Thêm ảnh screenshot giao diện vào README (mục “Ví dụ kết quả”)  
+- Đóng gói chạy thực tế bằng **Docker** / hướng dẫn deploy
