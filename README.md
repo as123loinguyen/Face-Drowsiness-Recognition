@@ -39,7 +39,7 @@ It can be applied in:
 ---
 
 ## 🗂️ Project Structure
-
+```
 Face-Drowsiness-Recognition/
 │
 ├── app.py # Main Flask application
@@ -59,6 +59,7 @@ Face-Drowsiness-Recognition/
 ├── requirements.txt # Python dependencies
 ├── .gitignore
 └── README.md
+```
 
 
 ---
