@@ -60,8 +60,6 @@ Face-Drowsiness-Recognition/
 ├── .gitignore
 └── README.md
 
-yaml
-Copy code
 
 ---
 
