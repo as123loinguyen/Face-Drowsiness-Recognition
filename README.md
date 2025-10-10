@@ -79,30 +79,32 @@ Please download the models from Google Drive and place them in the **root folder
 
 ## 🚀 How to Run the App
 
-### 1️⃣ Clone the repository
+### Step 1: Clone the repository
 ```bash
 git clone https://github.com/as123loinguyen/Face-Drowsiness-Recognition.git
 cd Face-Drowsiness-Recognition
-2️⃣ Create and activate a virtual environment
+Step 2: Create and activate a virtual environment
 For Windows:
+
 bash
 Copy code
 python -m venv venv
 venv\Scripts\activate
 For macOS/Linux:
+
 bash
 Copy code
 python3 -m venv venv
 source venv/bin/activate
-3️⃣ Install dependencies
+Step 3: Install dependencies
 bash
 Copy code
 pip install -r requirements.txt
-4️⃣ Download and place model files
-Download both .keras and .h5 models from Google Drive
-→ place them in the root directory (same folder as app.py).
+Step 4: Download and place model files
+Download both .keras and .h5 model files from Google Drive
+and place them in the root directory (same folder as app.py).
 
-5️⃣ Run the Flask app
+Step 5: Run the Flask app
 bash
 Copy code
 python app.py
@@ -111,9 +113,16 @@ Then open your browser and go to:
 cpp
 Copy code
 http://127.0.0.1:5000
-6️⃣ Stop the server
-Press Ctrl + C in the terminal to stop running the Flask app.
+Step 6: Stop the server
+Press Ctrl + C in the terminal to stop the Flask app.
 
+yaml
+Copy code
+
+---
+
+✅ Giờ bạn chỉ cần dán đúng nguyên khối này (từ dòng “## 🚀 How to Run the App” đến hết phần ``` cuối cùng).  
+GitHub sẽ tự hiển thị từng khung code riêng, có nút “Copy”, nhìn rất gọn gàng và đẹp y chang hướng dẫn kỹ
 🧩 How It Works
 User uploads an image or enables the webcam.
 
