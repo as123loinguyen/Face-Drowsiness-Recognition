@@ -72,8 +72,8 @@ Please download the models from Google Drive and place them in the **root folder
 
 | File Name | Description | Download Link |
 |------------|--------------|----------------|
-| `driver_drowsiness_model.keras` | CNN model for detecting drowsiness | [Download here](https://drive.google.com/your_keras_link) |
-| `emotional_model.h5` | CNN model for facial emotion recognition | [Download here]([https://drive.google.com/your_h5_link](https://drive.google.com/file/d/1Ob0sy18c9GsxzSwTtgoHk8X63H8LzC78/view?usp=sharing)) |
+| driver_drowsiness_model.keras | Drowsiness detection model | [Download here](https://drive.google.com/your_keras_link) |
+| emotional_model.h5 | Emotion recognition model | [Download here](https://drive.google.com/file/d/1Ob0sy18c9GsxzSwTtgoHk8X63H8LzC78/view?usp=sharing) |
 
 ---
 
