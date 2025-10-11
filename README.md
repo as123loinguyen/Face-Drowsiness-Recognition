@@ -69,7 +69,7 @@ Face-Drowsiness-Recognition/
 
 | File | Description | Download Link |
 |---|---|---|
-| `driver_drowsiness_model.keras` | Drowsiness detection model | *(replace with your public link)* `https://drive.google.com/your_keras_link` |
+| `driver_drowsiness_model.keras` | Drowsiness detection model | https://drive.google.com/file/d/1tPQBZZKzcxYON1p3z5SCcgvq1LUXMPMW/view?usp=sharing |
 | `emotional_model.h5` | Emotion recognition model | https://drive.google.com/file/d/1Ob0sy18c9GsxzSwTtgoHk8X63H8LzC78/view?usp=sharing |
 
 After downloading, put both files in the **project root** (same level as `app.py`).
