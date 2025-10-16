@@ -135,13 +135,7 @@ Press **Ctrl + C** in the terminal.
 
 ---
 
-## 🧪 Example Results
 
-| Input | Output |
-|---|---|
-| ![input](https://via.placeholder.com/220x150?text=Input) | ![output](https://via.placeholder.com/220x150?text=Drowsy+%7C+Happy) |
-
-> Replace placeholders with real screenshots from `static/uploads/` (if you save results).
 
 ---
 
